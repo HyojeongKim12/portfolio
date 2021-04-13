@@ -1,0 +1,35 @@
+/* mediaQuery  0 ~ 1220px*/
+
+
+
+/*화면 너비 0 ~ 1220px*/
+/* 화면 너비 0 ~ 1024px */
+/* 화면 너비 0 ~ 720px */
+@media(max-width:720px){
+    /*랜딩페이지*/
+    header{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .logo p:first-child{
+        font-size: 3rem;
+    }
+
+    .logo p:nth-child(2){
+        display: none;
+    }
+
+    header nav ul li {
+        padding: 25px;
+    }
+
+    header nav ul li a{
+        font-weight: 700;
+    }
+
+}

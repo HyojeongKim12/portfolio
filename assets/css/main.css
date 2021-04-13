@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+/**font-face**/
+@font-face {
+    font-family: noah-bold;
+    src: url(../font/Noah-Bold.otf);
+}
+
+@font-face {
+  font-family: noah-regular;
+  src: url(../font/Noah-Regular.otf);
+}
+
+@font-face {
+  font-family: noto-light;
+  src: url(../font/NotoSansKR-Light.otf);
+}
+
+@font-face {
+  font-family: noto-black;
+  src: url(../font/NotoSansKR-Black.otf);
+}
+
+/**root**/
+:root{
+    --main-blue:rgb(59, 160, 255);
+    --main-black: rgb(0,0,0);
+    --main-orange: rgb(230, 172, 0);
+    --main-orange: rgb(252, 174, 78);
+}
+
+
+/**a reset**/
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+/***************************************************CSS START****************************************************************/
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    z-index: -10;
+    width: 100vw;
+    -ms-overflow-style:none;
+    background-color: var(--main-blue);
+}
+
+/**scroll**/
+/**crome,safari,opera**/
+::-webkit-scrollbar{
+    display: none;
+}
+
+/********************loading********************/
+    .loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family:  noah-regural;
+    background-color: rgb(255,255,255);
+    z-index: 200;
+  }
+
+
+  .animation-title {
+    color: rgb(255,255,255);
+    font-size: 3.82rem;
+    font-weight: 700;
+    margin:0 0 0.5rem 0;
+    line-height: 1;
+    letter-spacing: 0.1em;
+  }
+  
+  .wave {
+    animation: moveTheWave 2400ms linear infinite;
+    stroke-dasharray: 0 16 101 16;
+  }
+  
+  @keyframes moveTheWave {
+  
+    0% {
+      stroke-dashoffset: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      stroke-dashoffset: -133;
+      transform: translate3d(-90px, 0, 0);
+    }
+  
+  }
+
+  .loader-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  
+    color: var(--main-blue);
+        z-index: 100;
+        width: 550px;
+        height: 300px;
+    text-align: center;
+  }
+ 
+
+.loading-text p{
+    font-size:0.8rem;
+    line-height: 1.2;
+    font-family: noah-bold;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+}
+
+.loading-text p:first-child{
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.svg-box{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.loader-bar{
+  position: absolute;
+  top: 0;
+}
+
+.shape-overlays {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+
+/*******************section 1**********************/
+
+/**header**/
+
+header{
+  font-family: noah-regular;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem 0 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255,255,255);
+}
+
+header .logo p{
+  line-height: 1.5;
+}
+
+header .logo p:first-child{
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+
+/**menu**/
+header>nav>ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+header>nav>ul>li{
+  padding: 10px;
+}
+
+
+header>nav>ul>li>a{
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+header>nav>ul>li>a:hover{
+  transition: all .3s ease;
+}
+
+.hover-span{
+  position: relative;
+}
+
+.hover-span::after{
+  content: '';
+  width: 0%;
+  left: 50%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid rgb(255,255,255);
+  transition: all .3s ease;
+}
+
+header>nav>ul>li>a:hover .hover-span::after{
+  content: '';
+  width: 100%;
+  left: 0px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin-top: 3px;
+  border-bottom: 2px solid #fff;
+  transition: all .3s ease;
+}
+
+/**section 1**/
+
+
+.RollingText{
+  font-family: noto-black;
+}
+
+.RollingText span{
+  color: #fff;
+  font-size: 5rem;
+  line-height: 1.25;
+}
+
+.main-canvas{
+  background-color: var(--main-blue);
+}
+
