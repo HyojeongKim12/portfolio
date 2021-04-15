@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hyojeong Kim"> 
     <!--CSS-->
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/prism.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
      <!--Loading -->
-<!--
+
 <div class="loader">
             <div class="loader-inner">
                 <svg width="80" height="60" viewBox="5 0 80 60">
@@ -37,7 +38,7 @@
             </div>
         </div>
   </div>
--->
+
 <section class="contents">
 <section id="section1">
         <header>    
@@ -46,27 +47,28 @@
 
             <nav id="nav">
                 <ul class="menu">
-                    <li id="menu1" style="transform: translate(0px,-100px); opacity: 0;"><a href="#section2"><span class="hover-span">About</span> </a></li>
-                    <li id="menu2" style="transform: translate(0px,-100px); opacity: 0;"><a href="#section4"><span class="hover-span">Works</span></a></li>
-                    <li id="menu3" style="transform: translate(0px,-100px); opacity: 0;"><a href="#section5"><span class="hover-span">Contact</span></a></li>
-                </ul>
+                    <li id="menu1" style="transform: translate(0px,-100px); opacity: 0;"><a class="hover-this" href="#section2"><span class="hover-span"> About</span> </a></li>
+                    <li id="menu2" style="transform: translate(0px,-100px); opacity: 0;"><a class="hover-this" href="#section4"><span class="hover-span">Works</span></a></li>
+                    <li id="menu3" style="transform: translate(0px,-100px); opacity: 0;"><a class="hover-this" href="#section5"><span class="hover-span">Contact</span></a></li>
+                  </ul>
+                  <div class="cursor"></div>
             </nav>
         </header>
 
-        <div class="main">
-          <canvas class="main-canvas" height="930"></canvas>
+   
+          <div class="main">
             <div class="RollingText">
               <div class="line1">
-                  <span>웹 표준을 지키는&nbsp; 시맨틱 마크업에 능숙한&nbsp; 동적 웹 구현을 즐기는&nbsp; 반응형 잘하는</span>
+                  <span>웹 표준을 지키는&nbsp;<br>시맨틱 마크업에 능숙한&nbsp;<br>동적 웹 구현을 즐기는&nbsp;<br>반응형 잘하는</span>
               </div>
 
               <div class="line2">
-                  <span>창의적인&nbsp; 디자인 감각이 있는&nbsp;</span>
+                  <span>창의적인&nbsp;<br>디자인 감각이 있는&nbsp;</span>
                 </div>
 
               <div class="line3">
                 <span>
-                    자바스크립트를 잘 아는&nbsp; 배우기를 멈추지 않는&nbsp;
+                    자바스크립트를 잘 아는&nbsp;<br>배우기를 멈추지 않는&nbsp;
                 </span>
                </div>
 
@@ -76,11 +78,52 @@
                     </span>
             </div>
             </div>
-        </div>
+
+            <div class="main-illust">
+              
+            </div>
+          </div>
+  
     </section>
 
-    <section id="section2"></section>
-    <section id="section3"></section>
+    <section id="section2">
+      <div class="row">
+        <div class="contianer">
+          <div class="about-sec">
+            <div class="about-img">
+             
+            </div>
+
+            <div class="about-text">
+              <div class="about-title">
+                <p>creative Developer / Designer</p>
+                <p>김효정</p>
+              </div>
+
+              <div class="about-des">
+                <span>
+                  안녕하세요!<br>
+                </span>
+                 <span>
+                  creative Developer / Designer 김효정 입니다.<br>
+                  사용자들에게 즐거운 경험을 주기 위해<br>
+                모션과 인터렉션 웹 제작에 집중하고 있습니다.<br>
+                열린 마음으로 즐겁게, 그리고 열심히 배우며 나아가고 있습니다.
+                 </span> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3">
+      <div class="row">
+        <div class="container">
+
+        </div>
+      </div>
+    </section>
     <section id="section4"></section>
 </section>
 
@@ -89,8 +132,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/wavify.js"></script>
-    <script src="./assets/js/jquery.wavify.js"></script>
+    <script src="./assets/js/prism.js"></script>
     <script src="./assets/js/main.js"></script>
  
  

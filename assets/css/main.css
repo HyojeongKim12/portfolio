@@ -49,6 +49,7 @@ body{
     width: 100vw;
     -ms-overflow-style:none;
     background-color: var(--main-blue);
+    cursor: none;
 }
 
 /**scroll**/
@@ -141,7 +142,6 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  cursor: pointer;
 }
 
 
@@ -186,52 +186,64 @@ header>nav>ul>li>a{
   font-weight: 500;
 }
 
-header>nav>ul>li>a:hover{
-  transition: all .3s ease;
-}
 
 .hover-span{
   position: relative;
+  display: inline-block;
+  pointer-events: none;
+  transition: transform 0.1s linear;
 }
 
-.hover-span::after{
-  content: '';
-  width: 0%;
-  left: 50%;
-  height: 1px;
-  display: block;
-  position: absolute;
-  margin-top: 3px;
-  border-bottom: 2px solid rgb(255,255,255);
-  transition: all .3s ease;
+
+.hover-this{
+  transition: all 0.3s ease;
 }
 
-header>nav>ul>li>a:hover .hover-span::after{
-  content: '';
-  width: 100%;
-  left: 0px;
-  height: 1px;
-  display: block;
-  position: absolute;
-  margin-top: 3px;
-  border-bottom: 2px solid #fff;
-  transition: all .3s ease;
+.cursor{
+  pointer-events: none;
+  position: fixed;
+  padding: 0.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
 }
+
+.hover-this:hover ~ cursor{
+  transform: translate(-50%,-50%) scale(8);
+}
+
+
 
 /**section 1**/
-
+.main{
+  width: 100vw;
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+}
 
 .RollingText{
   font-family: noto-black;
+  width: 50%;
 }
 
 .RollingText span{
   color: #fff;
-  font-size: 5rem;
-  line-height: 1.25;
+  font-size: 4rem;
+  line-height: 1.2;
+  -ms-user-select: none; 
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.main-canvas{
-  background-color: var(--main-blue);
+
+.main-illust{
+  background-color: #fff;
+  width: 50%;
 }
+
+
 
