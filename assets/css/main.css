@@ -23,10 +23,7 @@
 
 /**root**/
 :root{
-    --main-blue:rgb(59, 160, 255);
     --main-black: rgb(0,0,0);
-    --main-orange: rgb(230, 172, 0);
-    --main-orange: rgb(252, 174, 78);
 }
 
 
@@ -41,21 +38,12 @@ a:visited{
 }
 
 /***************************************************CSS START****************************************************************/
-
 body{
-    overflow-x: hidden;
     position: relative;
-    z-index: -10;
     width: 100vw;
     -ms-overflow-style:none;
-    background-color: var(--main-blue);
+    background-color: var(--main-black);
     cursor: none;
-}
-
-/**scroll**/
-/**crome,safari,opera**/
-::-webkit-scrollbar{
-    display: none;
 }
 
 /********************loading********************/
@@ -66,13 +54,13 @@ body{
     right: 0;
     bottom: 0;
     font-family:  noah-regural;
-    background-color: rgb(255,255,255);
+    background-color: #fff;
     z-index: 200;
   }
 
 
   .animation-title {
-    color: rgb(255,255,255);
+    color: #fff;
     font-size: 3.82rem;
     font-weight: 700;
     margin:0 0 0.5rem 0;
@@ -99,12 +87,16 @@ body{
   
   }
 
+  .loader{
+    background-color: var(--main-black);
+  }
+
   .loader-inner{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);  
-    color: var(--main-blue);
+    color: var(--main-black);
         z-index: 100;
         width: 550px;
         height: 300px;
@@ -116,7 +108,7 @@ body{
     font-size:0.8rem;
     line-height: 1.2;
     font-family: noah-bold;
-    color: rgb(255,255,255);
+    color: #fff;
     text-transform: uppercase;
 }
 
@@ -125,28 +117,16 @@ body{
   font-weight: 800;
 }
 
-.svg-box{
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
 .loader-bar{
   position: absolute;
   top: 0;
 }
 
-.shape-overlays {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 
 /*******************section 1**********************/
-
+.row{
+  padding: 0 70px;
+}
 /**header**/
 
 header{
@@ -154,19 +134,25 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem 0 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(255,255,255);
+  color: #fff;
+  background-color: var(--main-black);
 }
+
 
 header .logo p{
   line-height: 1.5;
 }
 
 header .logo p:first-child{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
+}
+
+header .logo p:nth-child(2){
+  font-size: 0.8rem;
 }
 
 
@@ -176,14 +162,19 @@ header>nav>ul{
   justify-content: space-between;
 }
 
-header>nav>ul>li{
-  padding: 10px;
+header>nav>ul li{
+  padding: 1.2rem;
+
 }
 
 
-header>nav>ul>li>a{
-  font-size: 0.8rem;
+header>nav>ul li a{
+  font-size: 1rem;
   font-weight: 500;
+}
+
+header>nav>ul li a:hover{
+  opacity: 80%;
 }
 
 
@@ -195,24 +186,23 @@ header>nav>ul>li>a{
 }
 
 
-.hover-this{
-  transition: all 0.3s ease;
-}
-
 .cursor{
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid #fff;
   pointer-events: none;
   position: fixed;
-  padding: 0.6rem;
-  background-color: #fff;
   border-radius: 50%;
   mix-blend-mode: difference;
-  transition: transform 0.3s ease;
+  transform: translate(-50%,-50%);
+  transition: all .3s ease;
+  transition-property: background,transform;
+  transform-origin: 100% 100%;
+  z-index: 10;
 }
-
-.hover-this:hover ~ cursor{
-  transform: translate(-50%,-50%) scale(8);
+.hover-span{
+  transition: all .3s ease;
 }
-
 
 
 /**section 1**/
@@ -220,30 +210,16 @@ header>nav>ul>li>a{
   width: 100vw;
   position: relative;
   display: flex;
-  padding-top: 20px;
-}
-
-.RollingText{
+  padding: 1rem 0 5rem 0;
   font-family: noto-black;
-  width: 50%;
-}
-
-.RollingText span{
-  color: #fff;
-  font-size: 4rem;
-  line-height: 1.2;
-  -ms-user-select: none; 
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-
-.main-illust{
-  background-color: #fff;
-  width: 50%;
 }
 
 
 
+/**section2**/
+
+
+
+.scroll-class{
+  opacity: 1;
+}
